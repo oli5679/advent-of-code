@@ -25,7 +25,7 @@ data = [[int(num) for num in row.split('\t')] for row in input_str.split('\n')]
 
 #2.a
 checksum= sum([max(x)-min(x) for x in data])
-print(checksum)
+print("2.a",checksum)
 
 #2.b
 
@@ -34,8 +34,6 @@ for row in data:
     for i in range(len(row)):
         for j in range(len(row)):
             if (row[i] / row[j]).is_integer() and row[i] / row[j] != 1:
-                print("row: ",row)
-                print("divisors: ",row[i],row[j])
                 total+= row[i]/row[j]
 
-print(total)
+print("2.b",total)

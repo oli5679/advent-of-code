@@ -45,9 +45,8 @@ assert count_jumps([0,3,0,1,-3]) == 5
 
 assert count_jumps_2([0,3,0,1,-3]) == 10
 
-
-print("1.a",count_jumps(clean_data))
+print("5.a",count_jumps(clean_data))
 
 clean_data = [int(x[0]) for x in data]
 
-print("1.b",count_jumps_2(clean_data))
+print("5.b",count_jumps_2(clean_data))

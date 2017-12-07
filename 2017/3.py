@@ -80,5 +80,4 @@ while flag:
     #print("num",num)
     if neighbour_total > 265149:
         print("3.b",int(neighbour_total))
-        #266339
         flag = False

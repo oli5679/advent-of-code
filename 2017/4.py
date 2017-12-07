@@ -51,6 +51,7 @@ counter_2 = 0
 for row in data:
     if is_valid_2(row[0]):
         counter_2 += 1
+        
 print("4.b",counter_2)
 
 

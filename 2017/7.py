@@ -4,6 +4,7 @@ Created on Thu Dec  7 10:16:15 2017
 
 @author: oliver.cairns
 """
+from utils import import_txt_file
 def clean_data_fn(data):
     all_vals= []
     clean_data = [row.split(" (") for row in data]
@@ -54,10 +55,8 @@ def highest_imbalances(raw_data):
             highest_imbalances.append(imbalance)
     return highest_imbalances
 
-problem_data = []
-with open('input_7.txt', 'r') as f:
-    for line in f.readlines():
-        problem_data.append(line.strip())
+problem_data = import_txt_file('input_7.txt')
+
 
 test_data = ["pbga (66)","xhth (57)","ebii (61)","havc (66)","ktlj (57)","fwft (72) -> ktlj, cntj, xhth", 
 "qoyq (66)","padx (45) -> pbga, havc, qoyq","tknk (41) -> ugml, padx, fwft","jptl (61)",
