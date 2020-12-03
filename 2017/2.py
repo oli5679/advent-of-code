@@ -4,7 +4,7 @@ Created on Sat Dec  2 14:31:46 2017
 
 @author: oliver.cairns
 """
-input_str ="""1364	461	1438	1456	818	999	105	1065	314	99	1353	148	837	590	404	123
+input_str = """1364	461	1438	1456	818	999	105	1065	314	99	1353	148	837	590	404	123
 204	99	235	2281	2848	3307	1447	3848	3681	963	3525	525	288	278	3059	821
 280	311	100	287	265	383	204	380	90	377	398	99	194	297	399	87
 7698	2334	7693	218	7344	3887	3423	7287	7700	2447	7412	6147	231	1066	248	208
@@ -21,19 +21,19 @@ input_str ="""1364	461	1438	1456	818	999	105	1065	314	99	1353	148	837	590	404	12
 378	171	155	1100	184	937	792	1436	1734	179	1611	1349	647	1778	1723	1709
 4463	4757	201	186	3812	2413	2085	4685	5294	5755	2898	200	5536	5226	1028	180"""
 
-data = [[int(num) for num in row.split('\t')] for row in input_str.split('\n')]
+data = [[int(num) for num in row.split("\t")] for row in input_str.split("\n")]
 
-#2.a
-checksum= sum([max(x)-min(x) for x in data])
-print("2.a",checksum)
+# 2.a
+checksum = sum([max(x) - min(x) for x in data])
+print("2.a", checksum)
 
-#2.b
+# 2.b
 
 total = 0
 for row in data:
     for i in range(len(row)):
         for j in range(len(row)):
             if (row[i] / row[j]).is_integer() and row[i] / row[j] != 1:
-                total+= row[i]/row[j]
+                total += row[i] / row[j]
 
-print("2.b",total)
+print("2.b", total)

@@ -8,14 +8,14 @@ input_str = "4281224989975872839961169513979579335691369498483794171253625322698
 
 total_a = 0
 for i in range(len(input_str)):
-    if(input_str[i-1]== input_str[i]):
+    if input_str[i - 1] == input_str[i]:
         total_a += int(input_str[i])
 
-print("1.a",total_a)
+print("1.a", total_a)
 
 total_b = 0
 for i in range(len(input_str)):
-    if(input_str[i-int(len(input_str)/2)]== input_str[i]):
+    if input_str[i - int(len(input_str) / 2)] == input_str[i]:
         total_b += int(input_str[i])
 
-print("1.b",total_b)
+print("1.b", total_b)
